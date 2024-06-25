@@ -39,11 +39,13 @@
   background-color: #388e3c;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .button {
     width: 100%;
   }
   .buttons-container {
+    padding-left: 16px;
+    padding-right: 16px;
     flex-direction: column;
   }
 }

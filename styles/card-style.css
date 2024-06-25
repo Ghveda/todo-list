@@ -1,10 +1,24 @@
 .box {
+  width: 400px;
   border-radius: 12px;
-  height: 170px;
+  height: 200px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .box {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    padding: 0;
+    width: 100%;
+  }
 }
