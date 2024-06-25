@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/button-style.css">
+  <link rel="stylesheet" href="./styles//card-style.css">
+  <link rel="stylesheet" href="./styles/modal-style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h2>Todo List</h2>
+      <button class="header-button button-green" onclick="createNew()">
+        Add New
+      </button>
+    </header>
+    <section class="container">
+      <div>
+        <h3>Pending</h3>
+        <div id="todos-container" class="todos-container"></div>
+      </div>
+      <div>
+        <h3>Completed</h3>
+        <div id="completed-container" class="completed-container"></div>
+      </div>
+    </section>
+    <section>
+      <div class="modal-container" id="modal-container">
+        <div class="modal">
+          <div class="modal-header">
+            <h2 class="modal-title">Modal Title</h2>
+            <button class="modal-close" onclick="showModal()">✖</button>
+          </div>
+          <div class="modal-body">
+            <form id="modalForm">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input required type="text" id="title" name="title" class="input">
+              </div>
+              <div class="form-group">
+                <label for="status">Status</label>
+                <select required id="status" name="status" class="select">
+                  <option value="Completed">Completed</option>
+                  <option value="Pending">Pending</option>
+                </select>
+              </div>
+              <div class="modal-actions">
+                <button type="submit" class="button button-green">Submit</button>
+                <button type="button" class="button button-red" onclick="showModal()">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+
+</html>
